@@ -1,0 +1,70 @@
+name: Research Agent Notification
+
+# Fires whenever the auto-research agent commits an update to the research log
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'skills/social-ideas/data/research-log.md'
+
+jobs:
+  send-notification:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Extract latest research summary
+        id: summary
+        run: |
+          # Pull the most recent research entry from the log
+          # Entries are separated by "## " headings
+          SUMMARY=$(awk '/^## /{found++} found==2{print; next} found>2{exit}' \
+            skills/social-ideas/data/research-log.md)
+
+          # Fallback if only one entry exists
+          if [ -z "$SUMMARY" ]; then
+            SUMMARY=$(tail -n 50 skills/social-ideas/data/research-log.md)
+          fi
+
+          # Escape for GitHub output
+          echo "content<<EOF" >> $GITHUB_OUTPUT
+          echo "$SUMMARY" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+          # Get the date of the run
+          RUN_DATE=$(date '+%B %d, %Y at %I:%M %p UTC')
+          echo "run_date=$RUN_DATE" >> $GITHUB_OUTPUT
+
+      - name: Send email notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "ARETE Research Agent — Update Complete (${{ steps.summary.outputs.run_date }})"
+          to: akhilgoli@aretelifestyle.org
+          from: "ARETE Research Agent <${{ secrets.MAIL_USERNAME }}>"
+          body: |
+            Your ARETE auto-research agent just completed a run.
+
+            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            WHAT WAS UPDATED
+            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+            ${{ steps.summary.outputs.content }}
+
+            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            Your skill's reference library has been updated in GitHub.
+            Pull the latest changes to get the freshest hooks and trends.
+
+            View full log:
+            https://github.com/akhilgoli-ux/ARETE/blob/main/skills/social-ideas/data/research-log.md
+
+            — ARETE Research Agent
