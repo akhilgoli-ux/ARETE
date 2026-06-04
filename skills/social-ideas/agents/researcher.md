@@ -117,11 +117,18 @@ Extract specific named sounds (not just genres) and match them to:
 **Output format for audio entries:**
 ```
 Sound name: "[exact searchable name on TikTok]"
+Emotional tone fit: [Inspirational / Reflective / Urgent / Educational /
+                     Vulnerable / Philosophical / Energizing / Cinematic]
 Format fit: [which formats it works for]
 Time slot fit: [which posting windows it matches]
-Mood: [one word — energizing / reflective / cinematic / casual / focused]
+Audio character: [one sentence — tempo, instrumentation, feel]
 Trending since: [approximate date if known]
 ```
+
+Tag every sound with its primary emotional tone first.
+A sound that works for Inspirational posts at 7pm is a completely different
+recommendation from one that works for Vulnerable posts at 9pm — even if
+the tempo is similar. Tone is the primary filter.
 
 Update `references/timing.md` → TRENDING AUDIO section with the new sounds.
 Remove sounds that are no longer trending (older than 3 weeks).

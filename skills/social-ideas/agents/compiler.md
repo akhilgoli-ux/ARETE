@@ -31,7 +31,8 @@ HASHTAGS:
   Mid:    [hashtag] · [hashtag]
   Niche:  [hashtag] · [hashtag]
 
-AUDIO: [TikTok search term — video/slideshow only]
+AUDIO: [specific named sound or search term]
+  Tone match: [post tone] → [audio character] → [why this sound fits]
 
 BEST TIME TO POST: [platform] — [window] on [day]
 

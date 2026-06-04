@@ -52,9 +52,98 @@ Avoid: Tuesday/Thursday afternoons · More than 1 feed post per day
 
 ## AUDIO MATCHING GUIDE
 
-Agent 1 uses this section to recommend audio. Every audio suggestion must match BOTH
-the format and the posting time slot. The research agent refreshes the TRENDING AUDIO
-section below every 3-4 days with specific named sounds.
+Agent 1 uses this section to recommend audio. Every suggestion must match THREE things
+in this priority order:
+
+1. **Post emotional tone** — the feeling of THIS specific post (most important)
+2. **Format** — what the format naturally calls for
+3. **Time slot** — the mood of the posting window
+
+Tone is always first. A vulnerability post at noon still needs reflective audio,
+not focused neutral audio, because the viewer's emotional state while watching
+overrides when they're watching it.
+
+---
+
+### Step 1 — Identify the Post's Emotional Tone
+
+Tag every post with one of these tones before picking audio:
+
+| Tone | What it feels like | Example posts |
+|------|-------------------|---------------|
+| **Inspirational** | Uplifting, forward-looking, possibility | Future self content, momentum meter reveal, constellation growth |
+| **Reflective** | Quiet, honest, inward | Family time realizations, year-end review, "I didn't notice until the data showed me" |
+| **Urgent** | Stakes feel high, time-sensitive | Quitter's Day content, goal deadline posts, "you're losing time" angles |
+| **Educational** | Clear, informative, calm authority | Did you know, myth vs reality, how ARETE works |
+| **Vulnerable** | Raw, personal, slightly uncomfortable | "I was home but not there", confession-style UGC rant |
+| **Philosophical** | Slow, thoughtful, ancient wisdom | Aristotle quotes, ἀρετή content, quote drops |
+| **Energizing** | Active, momentum-building, decisive | Before/after, fitness content, habit streak content |
+| **Cinematic** | Visual, atmospheric, brand-building | Aesthetic mood, voiceover b-roll, constellation visuals |
+
+---
+
+### Step 2 — Match Audio to Tone
+
+| Post Tone | Audio Character | Tempo | Instrumentation |
+|-----------|----------------|-------|-----------------|
+| **Inspirational** | Builds to a peak, releases with warmth | Medium → builds | Strings, piano with swell, light percussion enters mid-way |
+| **Reflective** | Stays soft throughout, room for silence | Slow | Single piano, acoustic guitar, ambient pads |
+| **Urgent** | Tension present from the start, doesn't fully release | Medium-fast | Minimal beat with low bass undertone, no resolution |
+| **Educational** | Neutral, sits completely in background | Steady medium | Lo-fi beats, light percussion, no emotional pull |
+| **Vulnerable** | Quiet, almost uncomfortably so | Very slow or none | Single instrument or silence — never upbeat |
+| **Philosophical** | Spacious, ancient-feeling, timeless | Very slow | Sparse piano, sustained notes, long silences |
+| **Energizing** | Momentum from first second, consistent | Medium-fast | Upbeat lo-fi, light beat, no lyrics |
+| **Cinematic** | Sweeping, intentional, carries the emotion | Varies with visuals | Full orchestral elements or dramatic piano |
+
+---
+
+### Step 3 — Cross-check Format and Time Slot
+
+After matching tone → audio, verify it doesn't conflict with format or time slot rules:
+
+**Format check:**
+- Trojan Horse / UGC Rant: audio must never feel produced — even inspirational tone gets lo-fi treatment
+- Quote Drop / Aesthetic Mood: audio IS the atmosphere — no compromise on quality here
+- Trending Audio format: skip this whole guide — the sound itself was chosen first
+- Carousel / Static Ad: no audio needed
+
+**Time slot check:**
+- 9pm–11pm: if tone says energizing, soften it — late night viewers need a gentler version
+- 6am–9am: if tone says urgent, ease off the tension — morning viewers don't want to wake up stressed
+- 12pm–2pm: educational content at lunch — neutral audio is always right here regardless of tone
+
+---
+
+### Audio Mood by Time Slot (fallback if tone is unclear)
+
+| Time Window | Mood Needed |
+|-------------|-------------|
+| 6am–9am | Energizing but gentle — morning momentum without pressure |
+| 12pm–2pm | Focused, neutral — audio should not compete with information |
+| 5pm–7pm | Warm and engaging — end of day, still alert |
+| 7pm–9pm | Present and full — peak viewing, audio can have more presence |
+| 9pm–11pm | Reflective and soft — late night emotional register |
+
+---
+
+### Audio Mood by Format (fallback if tone is unclear)
+
+| Format | Audio Mood |
+|--------|-----------|
+| Trojan Horse | Casual lo-fi — feels like background, never placed |
+| UGC Rant | None or barely-there ambient |
+| Story Time | Builds with the narrative, releases at the turn |
+| Founder Story | Warm acoustic — feels like a real conversation |
+| Day in My Life | Soft ambient, no lyrics |
+| Voiceover B-Roll | Cinematic — audio carries what visuals can't say |
+| Before / After | Tension in Part 1, softens or drops at the cut |
+| Did You Know | Neutral lo-fi — stays back |
+| Myth vs Reality | Slight contrast — tension on myth slides, resolves on reality |
+| Countdown | Light upbeat — energetic but never distracting |
+| POV | Dreamy or cinematic — helps viewer step into the scenario |
+| Trending Audio | The sound IS the content — match ARETE's message to the beat |
+| Quote Drop | Single note or minimal piano — silence between lines is intentional |
+| Aesthetic Mood | Cinematic — audio is the primary storytelling tool here |
 
 ### Audio Mood by Time Slot
 
