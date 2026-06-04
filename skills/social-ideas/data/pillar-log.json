@@ -1,14 +1,33 @@
 {
-  "_readme": "Content Pillar Balancer — tracks which life pillars have been covered so the skill warns when one is neglected.",
+  "_readme": "Content Pillar Balancer — tracks which life pillars have been covered so the skill warns when one is neglected. 20 pillars organized into 5 groups.",
+  "pillar_groups": {
+    "BODY":    ["FITNESS", "NUTRITION", "SLEEP", "HEALTH"],
+    "MIND":    ["MINDSET", "LEARNING", "CREATIVITY", "MENTAL_HEALTH"],
+    "SOUL":    ["GRATITUDE", "PRESENCE", "SPIRITUALITY", "PURPOSE"],
+    "PEOPLE":  ["FAMILY", "RELATIONSHIPS", "COMMUNICATION", "SERVICE"],
+    "LIFE":    ["GOALS", "FINANCE", "HABITS", "ENVIRONMENT"]
+  },
   "pillars": {
     "FITNESS":       { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
+    "NUTRITION":     { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
+    "SLEEP":         { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
+    "HEALTH":        { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
+    "MINDSET":       { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
+    "LEARNING":      { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
+    "CREATIVITY":    { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
+    "MENTAL_HEALTH": { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
+    "GRATITUDE":     { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
+    "PRESENCE":      { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
+    "SPIRITUALITY":  { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
+    "PURPOSE":       { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
     "FAMILY":        { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
+    "RELATIONSHIPS": { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
+    "COMMUNICATION": { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
+    "SERVICE":       { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
     "GOALS":         { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
     "FINANCE":       { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
     "HABITS":        { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
-    "MINDSET":       { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
-    "SLEEP":         { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
-    "RELATIONSHIPS": { "total_posts": 0, "last_used": null, "last_10_posts": 0 }
+    "ENVIRONMENT":   { "total_posts": 0, "last_used": null, "last_10_posts": 0 }
   },
   "recent_post_history": []
 }
