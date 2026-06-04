@@ -27,3 +27,14 @@ Read this to see what's been updated and when.
 
 ### Notes
 Initial build. Auto-research agent will begin refreshing from next scheduled run.
+
+---
+
+## 2026-06-04 — Notification Test
+
+### Test
+Email notification system test. If you received an email at akhilgoli@aretelifestyle.org
+after this commit, the system is working correctly.
+
+### Notes
+This entry was added to verify the GitHub Action fires correctly on research-log.md updates.
