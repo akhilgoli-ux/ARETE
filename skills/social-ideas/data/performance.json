@@ -1,0 +1,62 @@
+{
+  "_readme": "Unified performance tracking — replaces post-log.json. Tracks what was generated, what was skipped and why, A/B hook test results, and feed rhythm data.",
+
+  "total_sessions": 0,
+
+  "format_usage": {
+    "trojan-horse": 0, "ugc-rant": 0, "story-time": 0, "founder-story": 0,
+    "day-in-my-life": 0, "voiceover-broll": 0, "before-after": 0,
+    "did-you-know": 0, "myth-vs-reality": 0, "countdown": 0,
+    "green-screen": 0, "comment-reply": 0, "pov": 0, "duet-bait": 0,
+    "trending-audio": 0, "quote-drop": 0, "aesthetic-mood": 0,
+    "carousel": 0, "static-ad": 0
+  },
+
+  "hook_category_usage": {
+    "curiosity-gap": 0, "mistake-warning": 0, "contrarian": 0,
+    "direct-address": 0, "list-tease": 0, "bold-stat": 0,
+    "pattern-interrupt": 0, "future-self": 0, "vulnerability": 0, "pov": 0
+  },
+
+  "ab_test_results": {
+    "_readme": "Tracks which hook variant (A/B/C) was chosen each session. Over time reveals which hook categories consistently win.",
+    "total_tests": 0,
+    "variant_chosen": { "A": 0, "B": 0, "C": 0 },
+    "hook_category_wins": {
+      "curiosity-gap": 0, "mistake-warning": 0, "contrarian": 0,
+      "direct-address": 0, "list-tease": 0, "bold-stat": 0,
+      "pattern-interrupt": 0, "future-self": 0, "vulnerability": 0, "pov": 0
+    },
+    "format_hook_wins": {
+      "_readme": "Which hook category wins most per format. e.g. trojan-horse: {curiosity-gap: 3, vulnerability: 1}",
+      "trojan-horse": {}, "ugc-rant": {}, "story-time": {}, "founder-story": {},
+      "day-in-my-life": {}, "voiceover-broll": {}, "before-after": {},
+      "did-you-know": {}, "myth-vs-reality": {}, "countdown": {},
+      "green-screen": {}, "comment-reply": {}, "pov": {}, "duet-bait": {},
+      "trending-audio": {}, "quote-drop": {}, "aesthetic-mood": {},
+      "carousel": {}, "static-ad": {}
+    },
+    "log": []
+  },
+
+  "skip_reasons": {
+    "_readme": "Logged when a format is skipped and user gives a reason.",
+    "format_skips": {},
+    "hook_skips": {}
+  },
+
+  "format_signals": {
+    "_readme": "Soft signals from skip reasons. Values: situational / low-fit / timing / neutral.",
+    "signals": {}
+  },
+
+  "feed_rhythm": {
+    "_readme": "Tracks the last 10 posts to detect repetition in format, hook type, or emotional tone.",
+    "last_10_formats": [],
+    "last_10_hook_categories": [],
+    "last_10_emotional_tones": [],
+    "last_10_pillars": []
+  },
+
+  "sessions": []
+}

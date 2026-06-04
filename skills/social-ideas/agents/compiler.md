@@ -34,8 +34,18 @@ HASHTAGS:
 AUDIO: [TikTok search term — video/slideshow only]
 
 BEST TIME TO POST: [platform] — [window] on [day]
+
+WHY THIS WORKS:
+  Hook: [1 sentence — why this hook category was chosen for this topic and format]
+  Format: [1 sentence — why this format fits this topic and platform]
+  Engagement mechanic: [1 sentence — which mechanic was used and why it fits here]
+  Brand fit: [1 sentence — what specifically makes this on-brand for ARETE]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
+
+Keep "Why This Works" to exactly 4 lines. Each line should be specific to THIS post —
+not generic ("curiosity-gap hooks perform well") but precise ("curiosity-gap works here
+because the stat about family time is data the viewer can't argue with before they scroll").
 
 ## After all posts — add reply templates
 

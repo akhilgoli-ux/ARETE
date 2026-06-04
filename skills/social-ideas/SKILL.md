@@ -5,7 +5,7 @@ description: Generate ready-to-post Instagram and TikTok content for ARETE, the 
 
 # ARETE Social Content Skill
 
-You are the orchestrator for a 3-agent content generation pipeline. Your job is to receive the user's command, check performance memory and pillar balance, then pass everything to Agent 1 → Agent 2 → Agent 3 in sequence.
+You are the orchestrator for a 3-agent content generation pipeline. Your job is to receive the user's command, run pre-flight checks, then pass everything to Agent 1 → Agent 2 → Agent 3 in sequence.
 
 ## Commands
 
@@ -28,6 +28,8 @@ You are the orchestrator for a 3-agent content generation pipeline. Your job is 
 # Content calendar
 /social-ideas calendar --weeks N --instagram N/week --tiktok N/week
 ```
+
+---
 
 ## Step 1 — Show Format Menu (if --format missing or user types --format ?)
 
@@ -73,66 +75,103 @@ You are the orchestrator for a 3-agent content generation pipeline. Your job is 
 └─────────────────────────────────────────────────────────────┘
 ```
 
+---
+
 ## Step 2 — Route the command
 
 | Command pattern | Route to |
 |----------------|----------|
-| Standard `/social-ideas` | Agent 1 → 2 → 3 pipeline |
-| `series` | Read `references/series-mode.md`, then Agent 1 → 2 → 3 |
-| `arc` | Read `references/story-arc.md`, then Agent 1 → 2 → 3 |
-| `repurpose` | Read `references/cross-platform.md`, then Agent 1 → 2 → 3 |
-| `comments` | Read `agents/comment-strategist.md`, execute directly |
-| `calendar` | Read `references/series-mode.md` + `references/best-time-to-post.md`, Agent 1 → 2 → 3 |
+| Standard `/social-ideas` | Steps 3-6, then pipeline |
+| `series` / `arc` / `repurpose` | Read `references/advanced-modes.md`, then pipeline |
+| `comments` | Read `agents/comment-strategist.md`, execute directly, skip pipeline |
+| `calendar` | Read `references/advanced-modes.md` + `references/timing.md`, then pipeline |
 
-## Step 3 — Check Performance Memory (Adaptive)
+---
 
-Read `data/post-log.json`. This is NOT a simple "use what's popular" system.
+## Step 3 — Performance Memory Check (Adaptive)
 
-### What to pass to Agent 1:
-- Which formats have been used and how often
-- Which hook categories have been chosen
-- Any skip reasons logged (format_skips, hook_skips)
-- Any format signals built from previous skip reasons
+Read `data/performance.json`.
 
-### After output is delivered — ask about skips:
-If the user doesn't use one of the generated posts or formats, ask:
+**Pass to Agent 1:**
+- Format usage counts and format signals (situational / low-fit / neutral)
+- Hook category usage and A/B test results (which hook categories win most per format)
+- Feed rhythm data (last 10 formats, hook categories, emotional tones, pillars)
 
-> "I noticed you didn't use the [format] post — any reason? 
-> (e.g., wrong topic for it, doesn't suit ARETE, just didn't need it today)"
+**A/B tracker — ask after output:**
+After delivering posts, ask once:
+> "When you use these — let me know which hook variant (A, B, or C) you went with.
+> I'll log it to sharpen future suggestions."
 
-Wait for their answer. Then log it:
-- "wrong topic / timing" → tag as `situational` — still show this format, just pair it better
-- "doesn't suit ARETE" or "off brand" → tag as `low-fit` — show less often, never remove entirely
-- "just didn't need it today" or no clear reason → tag as `neutral` — no change
-- "I hate this format" → tag as `low-fit`
+When they answer, update `ab_test_results` in performance.json:
+- Increment `variant_chosen.[A/B/C]`
+- Identify the hook category of the chosen variant
+- Increment `hook_category_wins.[category]`
+- Increment `format_hook_wins.[format].[category]`
 
-**Never fully remove a format from suggestions.** Every format has a use case.
-The goal is to understand the WHY, not just count the skips.
+**Skip tracking — ask if a post goes unused:**
+> "I noticed you didn't use the [format] post — any reason?"
 
-Update `data/post-log.json` with the reason under `skip_reasons.format_skips`
-and update `format_signals.signals` accordingly.
+Log the response:
+- "wrong topic / timing" → `situational` — still show, pair better next time
+- "doesn't suit ARETE" / "off brand" → `low-fit` — show less, never remove
+- "just didn't need it" → `neutral` — no change
+- "I hate this" → `low-fit`
 
-## Step 4 — Check Pillar Balance
+Never fully remove a format. The goal is to understand WHY, not just count skips.
 
-Read `data/pillar-log.json`. If any pillar has 0 posts in last 10, flag it:
-> "Note: You haven't posted about [PILLAR] recently. Want me to work it in?"
+---
 
-Pillars: FITNESS · FAMILY · GOALS · FINANCE · HABITS · MINDSET · SLEEP · RELATIONSHIPS
+## Step 4 — Feed Rhythm Check
 
-## Step 5 — Run the pipeline
+Read `performance.json` → `feed_rhythm.last_10_formats` and `last_10_hook_categories`.
 
-Pass to agents in sequence. Each agent reads their own instruction file:
+Flag and tell the user if:
+- Same format appears 3+ times in last 10 → "Your last few posts have been heavy on [format] — mixing in a [different format] would balance the feed."
+- Same hook category appears 4+ times in last 10 → "You've been leading with [hook type] a lot — consider a [different hook type] for variety."
+- Same emotional tone 3+ times in row → "Feed is running [tone] heavy — a [contrasting tone] post would give it breathing room."
+- Same pillar 3+ times in last 5 → "ARETE's brand covers everything — you've been in [pillar] a lot. Consider [neglected pillar]."
+
+Don't block generation — just flag it and let the user decide.
+
+---
+
+## Step 5 — Pillar Balance Check
+
+Read `data/pillar-log.json`. If any pillar shows `last_10_posts: 0`, flag it:
+> "Note: You haven't posted about [PILLAR] recently. Want me to work it into one of today's posts?"
+
+20 pillars across 5 groups:
+BODY: FITNESS · NUTRITION · SLEEP · HEALTH
+MIND: MINDSET · LEARNING · CREATIVITY · MENTAL_HEALTH
+SOUL: GRATITUDE · PRESENCE · SPIRITUALITY · PURPOSE
+PEOPLE: FAMILY · RELATIONSHIPS · COMMUNICATION · SERVICE
+LIFE: GOALS · FINANCE · HABITS · ENVIRONMENT
+
+---
+
+## Step 6 — Seasonal Check
+
+Read `references/timing.md` → seasonal calendar.
+If any seasonal moment is within 14 days, tell Agent 1 to include one seasonally-aware post option in the batch. Label it `SEASONAL: [moment name]` in metadata.
+
+---
+
+## Step 7 — Run the pipeline
+
 - Agent 1: `agents/ideator.md`
 - Agent 2: `agents/critic.md`
 - Agent 3: `agents/compiler.md`
 
-For `comments` command: execute `agents/comment-strategist.md` directly, skip pipeline.
+---
 
-## Step 6 — Update logs after output
+## Step 8 — Update logs after output
 
-Append to `data/post-log.json` and `data/pillar-log.json` with what was generated.
+Update `data/performance.json` → feed_rhythm arrays (shift new entries in, drop oldest if over 10).
+Update `data/pillar-log.json` → increment pillars used, update last_10_posts counts.
 
-## Slide Count Rule (hard constraint at every stage)
+---
+
+## Slide Count Rule (enforced at every stage)
 - Default: 5-7 slides
 - Absolute maximum: 10 slides, only when format research strongly supports it
-- Never exceed 10. If content needs more, split into two posts.
+- Never exceed 10. Split into two posts instead.
