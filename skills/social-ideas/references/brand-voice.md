@@ -53,6 +53,11 @@ This is 2,400-year-old wisdom made actionable with modern AI.
 - Salesy: "Get it NOW!" / "Limited time!"
 - Overly casual slang that doesn't fit the philosophical aesthetic
 - Corporate wellness: "holistic wellbeing journey"
+- "My AI" or "the AI told me" — this makes ARETE sound like a cold external tool.
+  ARETE should feel like a personal system that is part of the user's life, not
+  something they're operating from a distance. Reference it by name (ARETE),
+  by feature (the constellation, the momentum meter, my weekly review), or
+  by what it showed/revealed — never as "my AI" or "the AI."
 
 ## Recurring ARETE Phrases
 - "Your former self" vs "your future self"

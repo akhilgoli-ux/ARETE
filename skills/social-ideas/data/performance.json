@@ -1,62 +1,92 @@
 {
   "_readme": "Unified performance tracking — replaces post-log.json. Tracks what was generated, what was skipped and why, A/B hook test results, and feed rhythm data.",
 
-  "total_sessions": 0,
+  "total_sessions": 1,
 
   "format_usage": {
-    "trojan-horse": 0, "ugc-rant": 0, "story-time": 0, "founder-story": 0,
-    "day-in-my-life": 0, "voiceover-broll": 0, "before-after": 0,
+    "trojan-horse": 1, "ugc-rant": 0, "story-time": 1, "founder-story": 0,
+    "day-in-my-life": 0, "voiceover-broll": 0, "before-after": 1,
     "did-you-know": 0, "myth-vs-reality": 0, "countdown": 0,
     "green-screen": 0, "comment-reply": 0, "pov": 0, "duet-bait": 0,
     "trending-audio": 0, "quote-drop": 0, "aesthetic-mood": 0,
-    "carousel": 0, "static-ad": 0
+    "carousel": 2, "static-ad": 0
   },
 
   "hook_category_usage": {
-    "curiosity-gap": 0, "mistake-warning": 0, "contrarian": 0,
+    "curiosity-gap": 0, "mistake-warning": 0, "contrarian": 1,
     "direct-address": 0, "list-tease": 0, "bold-stat": 0,
     "pattern-interrupt": 0, "future-self": 0, "vulnerability": 0, "pov": 0
   },
 
   "ab_test_results": {
-    "_readme": "Tracks which hook variant (A/B/C) was chosen each session. Over time reveals which hook categories consistently win.",
-    "total_tests": 0,
-    "variant_chosen": { "A": 0, "B": 0, "C": 0 },
+    "_readme": "Tracks which hook variant (A/B/C) was chosen each session.",
+    "total_tests": 1,
+    "variant_chosen": { "A": 0, "B": 0, "C": 1 },
     "hook_category_wins": {
-      "curiosity-gap": 0, "mistake-warning": 0, "contrarian": 0,
+      "curiosity-gap": 0, "mistake-warning": 0, "contrarian": 1,
       "direct-address": 0, "list-tease": 0, "bold-stat": 0,
       "pattern-interrupt": 0, "future-self": 0, "vulnerability": 0, "pov": 0
     },
     "format_hook_wins": {
-      "_readme": "Which hook category wins most per format. e.g. trojan-horse: {curiosity-gap: 3, vulnerability: 1}",
-      "trojan-horse": {}, "ugc-rant": {}, "story-time": {}, "founder-story": {},
-      "day-in-my-life": {}, "voiceover-broll": {}, "before-after": {},
-      "did-you-know": {}, "myth-vs-reality": {}, "countdown": {},
-      "green-screen": {}, "comment-reply": {}, "pov": {}, "duet-bait": {},
-      "trending-audio": {}, "quote-drop": {}, "aesthetic-mood": {},
-      "carousel": {}, "static-ad": {}
+      "_readme": "Which hook category wins most per format.",
+      "trojan-horse": {}, "ugc-rant": {}, "story-time": { "contrarian": 1 },
+      "founder-story": {}, "day-in-my-life": {}, "voiceover-broll": {},
+      "before-after": {}, "did-you-know": {}, "myth-vs-reality": {},
+      "countdown": {}, "green-screen": {}, "comment-reply": {}, "pov": {},
+      "duet-bait": {}, "trending-audio": {}, "quote-drop": {},
+      "aesthetic-mood": {}, "carousel": {}, "static-ad": {}
     },
-    "log": []
+    "log": [
+      {
+        "date": "2026-06-04",
+        "format": "story-time",
+        "emotional_tone": "Reflective",
+        "pillar": "PRESENCE",
+        "variant_chosen": "C",
+        "hook_category": "contrarian",
+        "hook_text": "I thought presence was something you felt. Turns out it's something you measure.",
+        "skipped_hooks": {
+          "A": { "text": "I was in every room. I wasn't in any of them.", "reason": "unclear — drop-in style confused without context" },
+          "B": { "text": "My AI told me something about my own life that I wasn't ready to hear.", "reason": "avoid — 'my AI' framing feels cold, distances user from ARETE" }
+        }
+      }
+    ]
   },
 
   "skip_reasons": {
     "_readme": "Logged when a format is skipped and user gives a reason.",
     "format_skips": {},
-    "hook_skips": {}
+    "hook_skips": {
+      "pattern-interrupt": {
+        "signal": "situational",
+        "note": "Drop-in mid-thought hooks (Hook A style) are unclear without context setup. Use sparingly and only when the opening line is self-explanatory on its own."
+      },
+      "ai-reference": {
+        "signal": "low-fit",
+        "note": "Avoid 'my AI' phrasing. ARETE should feel like a personal system, not a tool the user is operating. Reference the app by name or by feature (constellation, momentum meter) instead."
+      }
+    }
   },
 
   "format_signals": {
-    "_readme": "Soft signals from skip reasons. Values: situational / low-fit / timing / neutral.",
+    "_readme": "Soft signals from skip reasons.",
     "signals": {}
   },
 
   "feed_rhythm": {
-    "_readme": "Tracks the last 10 posts to detect repetition in format, hook type, or emotional tone.",
-    "last_10_formats": [],
-    "last_10_hook_categories": [],
-    "last_10_emotional_tones": [],
-    "last_10_pillars": []
+    "_readme": "Tracks the last 10 posts to detect repetition.",
+    "last_10_formats": ["trojan-horse", "carousel", "before-after", "carousel", "story-time"],
+    "last_10_hook_categories": ["pattern-interrupt", "contrarian", "contrarian", "contrarian", "contrarian"],
+    "last_10_emotional_tones": ["Reflective", "Educational", "Energizing", "Educational", "Reflective"],
+    "last_10_pillars": ["FAMILY", "HABITS", "NUTRITION", "HABITS", "PRESENCE"]
   },
 
-  "sessions": []
+  "sessions": [
+    {
+      "date": "2026-06-04",
+      "posts_generated": 5,
+      "formats_used": ["trojan-horse", "carousel", "before-after", "carousel", "story-time"],
+      "pillars_covered": ["FAMILY", "HABITS", "NUTRITION", "HABITS", "PRESENCE"]
+    }
+  ]
 }
