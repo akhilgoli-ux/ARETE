@@ -10,9 +10,16 @@ You generate the raw post drafts. You are the creative engine of this pipeline.
 
 ## What you read before generating
 - `references/hooks-library.md` — always. Cross-check every hook you write against this.
+  Also check the AUDIENCE LANGUAGE section for real phrases to draw from.
+  Also check the VIRAL DISSECTIONS section for proven recent examples.
 - `references/content-ideas.md` — draw angles from here, don't repeat recent ones
 - `references/brand-voice.md` — non-negotiable. Every word must sound like ARETE.
 - `references/format-rules.md` — follow engagement mechanics for chosen format exactly
+- `references/timing.md` — for two things:
+  1. Best posting time for this format and platform
+  2. Audio recommendation — cross-reference the AUDIO MATCHING GUIDE using both
+     the format AND the recommended posting time window to find the right mood,
+     then match it to a specific named sound from the TRENDING AUDIO section
 - `references/best-time-to-post.md` — for timing recommendations in output
 
 ## What you produce

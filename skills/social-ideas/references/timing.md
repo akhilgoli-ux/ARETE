@@ -48,6 +48,98 @@ Format-specific:
 
 Avoid: Tuesday/Thursday afternoons · More than 1 feed post per day
 
+---
+
+## AUDIO MATCHING GUIDE
+
+Agent 1 uses this section to recommend audio. Every audio suggestion must match BOTH
+the format and the posting time slot. The research agent refreshes the TRENDING AUDIO
+section below every 3-4 days with specific named sounds.
+
+### Audio Mood by Time Slot
+
+| Time Window | Mood Needed | Why |
+|-------------|-------------|-----|
+| 6am–9am | Energizing but calm | Viewer is waking up, starting the day — needs gentle momentum, not intensity |
+| 12pm–2pm | Focused, neutral | Mid-day informational content — audio should not distract from the message |
+| 5pm–7pm | Warm and engaging | End of workday, people are winding down but still alert |
+| 7pm–9pm | Slightly elevated energy | Peak viewing window — audio can have more presence |
+| 9pm–11pm | Reflective, slow, soft | Late-night emotional mood — audio should feel like a quiet thought, not a push |
+
+### Audio Mood by Format
+
+| Format | Audio Mood | Notes |
+|--------|-----------|-------|
+| Trojan Horse | Casual, natural | Lo-fi background noise, coffee shop ambience, soft beats with no drama |
+| UGC Rant | None or minimal | Often works best with no music — raw feels more authentic |
+| Story Time | Slow cinematic build | Tension rises with the story, releases at the turn |
+| Founder Story | Warm, personal | Acoustic or soft piano — feels like a real conversation |
+| Day in My Life | Soft ambient | Gentle lo-fi, no lyrics, unobtrusive |
+| Voiceover B-Roll | Cinematic | The audio carries the emotion the visuals can't |
+| Before / After | Tension → release | Builds in Part 1, drops or softens at the hard cut |
+| Did You Know | Focused, neutral | Stat-heavy content — audio sits back |
+| Myth vs Reality | Contrast audio | Slight tension on Myth slides, resolves on Reality slides |
+| Countdown | Upbeat, focused | Energetic but not distracting from the text |
+| Green Screen | Neutral or none | The background content is already busy — audio should sit back |
+| POV | Dreamy or cinematic | Helps the viewer step into the scenario |
+| Duet Bait | Minimal | Keep it simple — the point is to invite a response, not a full experience |
+| Trending Audio | The sound IS the content | Match ARETE's message to the beat/lyric moment precisely |
+| Quote Drop | Single note or minimal piano | Silence between lines is intentional — don't fill it |
+| Aesthetic Mood | Cinematic, intentional | Only post type where audio is the primary storytelling tool |
+| Carousel (Instagram) | N/A | Carousels don't autoplay audio |
+| Static Ad | N/A | Static images have no audio |
+
+### Combined Recommendation Logic
+
+When Agent 1 picks audio, cross-reference BOTH tables:
+
+Example: Trojan Horse posting at 9pm–11pm
+→ Format says: casual, lo-fi
+→ Time slot says: reflective, slow, soft
+→ Combined: slow lo-fi, minimal energy, feels like background thought music
+
+Example: Quote Drop posting at 9pm–11pm
+→ Format says: single note or minimal piano
+→ Time slot says: reflective, slow, soft
+→ Combined: single piano note, long sustain, room for silence between lines
+
+Example: Countdown posting at 12pm–2pm
+→ Format says: upbeat, focused
+→ Time slot says: focused, neutral
+→ Combined: light beat, minimal, keeps energy without distracting
+
+---
+
+## TRENDING AUDIO
+*(Auto-research agent updates this section every 3-4 days)*
+*(Remove sounds older than 3 weeks — they lose algorithm advantage)*
+
+Last updated: 2026-06-04
+
+### Currently Trending
+
+```
+Sound: "cinematic motivation instrumental"
+Format fit: Story Time, Voiceover B-Roll, Before/After
+Time slot fit: 7pm–9pm, 9pm–11pm
+Mood: cinematic
+Notes: Search this term on TikTok/Instagram — several variants trending
+
+Sound: "quiet lo-fi study beats"
+Format fit: Day in My Life, Trojan Horse, POV
+Time slot fit: 6am–9am, 12pm–2pm, 9pm–11pm
+Mood: calm
+Notes: Evergreen category — always a safe choice for lifestyle content
+
+Sound: "single piano note ambient"
+Format fit: Quote Drop, Aesthetic Mood, Founder Story
+Time slot fit: 9pm–11pm, 8pm–10pm
+Mood: reflective
+Notes: Minimal is key — silence should be audible between notes
+```
+
+*Research agent will replace these with specific named trending sounds on next run.*
+
 ### Cross-platform rule
 Never post same content on both platforms simultaneously.
 Stagger by minimum 4 hours, ideally 24 hours.
