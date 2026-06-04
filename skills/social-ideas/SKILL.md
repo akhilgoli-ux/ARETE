@@ -84,12 +84,33 @@ You are the orchestrator for a 3-agent content generation pipeline. Your job is 
 | `comments` | Read `agents/comment-strategist.md`, execute directly |
 | `calendar` | Read `references/series-mode.md` + `references/best-time-to-post.md`, Agent 1 → 2 → 3 |
 
-## Step 3 — Check Performance Memory
+## Step 3 — Check Performance Memory (Adaptive)
 
-Read `data/post-log.json`. Pass to Agent 1:
-- Which formats used most/least
-- Which hook categories preferred
-- Recent post history to avoid repetition
+Read `data/post-log.json`. This is NOT a simple "use what's popular" system.
+
+### What to pass to Agent 1:
+- Which formats have been used and how often
+- Which hook categories have been chosen
+- Any skip reasons logged (format_skips, hook_skips)
+- Any format signals built from previous skip reasons
+
+### After output is delivered — ask about skips:
+If the user doesn't use one of the generated posts or formats, ask:
+
+> "I noticed you didn't use the [format] post — any reason? 
+> (e.g., wrong topic for it, doesn't suit ARETE, just didn't need it today)"
+
+Wait for their answer. Then log it:
+- "wrong topic / timing" → tag as `situational` — still show this format, just pair it better
+- "doesn't suit ARETE" or "off brand" → tag as `low-fit` — show less often, never remove entirely
+- "just didn't need it today" or no clear reason → tag as `neutral` — no change
+- "I hate this format" → tag as `low-fit`
+
+**Never fully remove a format from suggestions.** Every format has a use case.
+The goal is to understand the WHY, not just count the skips.
+
+Update `data/post-log.json` with the reason under `skip_reasons.format_skips`
+and update `format_signals.signals` accordingly.
 
 ## Step 4 — Check Pillar Balance
 

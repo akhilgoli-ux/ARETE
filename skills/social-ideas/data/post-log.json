@@ -1,5 +1,5 @@
 {
-  "_readme": "Performance Memory — logs every post generated so the skill learns user preferences over time.",
+  "_readme": "Performance Memory — adaptive learning log. Tracks what was generated, what was skipped, and WHY it was skipped. The skill asks before drawing conclusions.",
   "total_sessions": 0,
   "format_usage": {
     "trojan-horse": 0, "ugc-rant": 0, "story-time": 0, "founder-story": 0,
@@ -13,6 +13,15 @@
     "curiosity-gap": 0, "mistake-warning": 0, "contrarian": 0,
     "direct-address": 0, "list-tease": 0, "bold-stat": 0,
     "pattern-interrupt": 0, "future-self": 0, "vulnerability": 0, "pov": 0
+  },
+  "skip_reasons": {
+    "_readme": "Logged when user skips a format and gives a reason. Used to understand WHY something was skipped — not just that it was.",
+    "format_skips": {},
+    "hook_skips": {}
+  },
+  "format_signals": {
+    "_readme": "Soft signals built from skip reasons. Values: 'situational' (skip had a reason, still show sometimes), 'low-fit' (user said it doesnt suit ARETE), 'timing' (skipped because wrong day/topic not wrong format). Never fully removes a format.",
+    "signals": {}
   },
   "sessions": []
 }

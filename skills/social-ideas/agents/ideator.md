@@ -79,7 +79,29 @@ BEST TIME TO POST:
 - Second-to-last slide always has strongest emotional beat
 - Final slide always CTA
 
-## Bias from performance memory
-Weight your output toward formats and hook types the user has actually used.
-Introduce variety gradually — don't only show what's been used before, but don't
-lead with formats they've never chosen after 10+ sessions ignoring them.
+## How to read performance memory (adaptive)
+
+Read `data/post-log.json` carefully — especially `skip_reasons` and `format_signals`.
+
+**If a format has no signal yet (never been skipped with a reason):**
+→ Include it normally. No bias either way.
+
+**If a format is tagged `situational`:**
+→ Still include it. Just pair it with the right topic — the skip was about timing, not fit.
+→ e.g., if green-screen was skipped because "no news topic that day," include it when
+   the topic naturally lends itself to a trending headline angle.
+
+**If a format is tagged `low-fit`:**
+→ Deprioritize but don't eliminate. Include it once every 4-5 sessions, in a version
+   that directly addresses the concern raised. If the user said "too casual for ARETE,"
+   write a more refined version and note: "Updated take on [format] based on your feedback."
+
+**If a format is tagged `neutral`:**
+→ No change. Treat as fresh.
+
+**Never:**
+→ Drop a format entirely based on skips alone
+→ Assume a skip means dislike without a stated reason
+→ Ask about skips yourself — that's the orchestrator's job after output is delivered
+
+The point is to get smarter about context, not to shrink the menu.
