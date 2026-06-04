@@ -271,6 +271,25 @@ Places viewer directly in a scenario. Instant first-person experience.
 
 ---
 
+## HOOK PERFORMANCE SIGNALS (from session data)
+
+**Strongest category for ARETE: CONTRARIAN**
+Contrarian hooks align naturally with ARETE's core premise —
+"you think you're doing fine, the data disagrees."
+Lead with contrarian when format allows. Prioritize for story-time,
+carousel, before-after, and ugc-rant.
+
+**Situational — use carefully: PATTERN INTERRUPT**
+Drop-in mid-thought hooks only work when the opening line is
+completely self-explanatory without context.
+"I was in every room. I wasn't in any of them." — REJECTED (needs setup)
+"— and that's when I realized I hadn't called my mom in 3 weeks." — OK (self-contained)
+
+**Banned language in any hook category:**
+Never reference "my AI" or "the AI" — makes ARETE feel like a cold external tool.
+Replace with: ARETE, the constellation, the momentum meter, my weekly review,
+"ARETE flagged", "the data showed", "my score dropped."
+
 ## HOOKS TO AVOID (flagged by Agent 2 — overused or off-brand)
 - "This changed my life." — too vague, too common
 - "Nobody talks about this." — overused

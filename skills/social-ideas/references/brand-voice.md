@@ -59,6 +59,38 @@ This is 2,400-year-old wisdom made actionable with modern AI.
   by feature (the constellation, the momentum meter, my weekly review), or
   by what it showed/revealed — never as "my AI" or "the AI."
 
+## Learned Writing Patterns (from session analysis)
+
+These patterns consistently produce the highest-scoring posts for ARETE.
+Agent 1 should apply all three to every piece of copy written.
+
+**1. Short declarative sentences with space after them.**
+One thought. Full stop. Let it sit. Don't explain it.
+✓ "The number was a lot lower than the story I was telling myself."
+✗ "The number was a lot lower than the story I was telling myself, which made me realize I needed to change something."
+
+**2. Specificity over generality — write like data.**
+ARETE is a data product. The copy should feel precise, not vague.
+✓ "Six hours in a month." / "January 19th." / "A star in my constellation had gone dark."
+✗ "Not much time." / "Most people quit early." / "One of my life areas was being neglected."
+
+**3. The second-to-last line carries the emotional weight.**
+The last line is the exit — quiet, clean. The peak happens one line before.
+The post lands in the second-to-last beat, then steps back.
+✓ "I don't know, I'm still thinking about it." [then quiet close]
+✗ Ending on the biggest emotional statement — it closes the door too hard.
+
+**4. Unresolved endings pull more comments than resolved ones.**
+Don't wrap up neatly. Leave space for the viewer to finish the thought.
+The discomfort of an open ending is the engagement mechanic.
+
+**5. Name the feature, don't describe it.**
+✓ "A star in my constellation had gone dark."
+✓ "My momentum score dropped."
+✓ "ARETE flagged something."
+✗ "The app noticed one of my habits was being neglected."
+✗ "My AI told me something."
+
 ## Recurring ARETE Phrases
 - "Your former self" vs "your future self"
 - "The gap between who you are and who you said you'd be"

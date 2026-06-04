@@ -191,6 +191,33 @@ Use as starting points, not scripts.
 
 ---
 
+## HIGH-PRIORITY CONTENT ANGLES (confirmed through session analysis)
+
+These specific angles have been validated as high-performing for ARETE.
+Agent 1 should prioritize these when format is flexible.
+
+**★★★ The comparison angle — "you have 6 apps, none of them talk to each other"**
+The strongest post type for ARETE's pre-launch stage.
+Differentiates clearly, explains the product, and resonates emotionally in 3 slides.
+Should be in regular rotation. Refresh with new competitor references as they emerge.
+
+**★★★ The dark star / neglected pillar angle**
+"A star in my constellation had gone dark."
+Works across almost every pillar. Highly specific to ARETE's brand.
+Most powerful when the neglected pillar is unexpected — not fitness (expected)
+but presence, relationships, or creativity (blindsiding).
+
+**★★★ The visibility insight angle**
+"The number was a lot lower than the story I was telling myself."
+ARETE's core value proposition in one sentence.
+Works as a hook, a body line, or a closing line.
+Refresh with different life areas each time.
+
+**★★ The unresolved realization**
+Post ends without a conclusion. Viewer finishes the thought.
+Drives the most comments of any format.
+Best paired with: story-time, ugc-rant, trojan-horse.
+
 ## ARETE PRODUCT ANGLES
 - The momentum meter explained: what it is and why it changes everything
 - What your constellation looks like after 7 days vs. 30 days vs. 90 days

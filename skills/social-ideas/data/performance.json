@@ -81,6 +81,34 @@
     "last_10_pillars": ["FAMILY", "HABITS", "NUTRITION", "HABITS", "PRESENCE"]
   },
 
+  "training_insights": {
+    "_readme": "Insights surfaced from internal agent analysis sessions. Updated after each training run.",
+    "last_training": "2026-06-04",
+    "confirmed_working": [
+      "contrarian hooks — strongest category for ARETE, aligns with core premise",
+      "vulnerability without resolution — open endings pull more comments than resolved ones",
+      "constellation and momentum meter named specifically — more powerful than described",
+      "3-slide carousels for direct ads — right length for pre-launch conversion content",
+      "comparison angle (6 apps vs ARETE) — highest value content type identified",
+      "short declarative sentences with space after — don't explain, let it land",
+      "specificity over generality — write like data (six hours, january 19th)",
+      "second-to-last line carries emotional weight — last line is the quiet exit"
+    ],
+    "confirmed_not_working": [
+      "my AI / the AI told me — cold, distances user from ARETE",
+      "pattern-interrupt hooks without self-contained context — confusing",
+      "resolved endings — wrap-up bows close the door on engagement",
+      "vague design specs — every element needs hex, weight, size, position"
+    ],
+    "feed_gaps_to_fill": [
+      "emotional tone: Inspirational (not yet used)",
+      "emotional tone: Philosophical (not yet used)",
+      "emotional tone: Urgent (not yet used)",
+      "formats: ugc-rant, quote-drop, day-in-my-life, voiceover-broll (not yet used)",
+      "pillars: GOALS, FITNESS, SLEEP, LEARNING, CREATIVITY, FINANCE (not yet touched)"
+    ]
+  },
+
   "sessions": [
     {
       "date": "2026-06-04",
