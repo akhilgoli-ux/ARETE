@@ -1,0 +1,14 @@
+{
+  "_readme": "Content Pillar Balancer — tracks which life pillars have been covered so the skill warns when one is neglected.",
+  "pillars": {
+    "FITNESS":       { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
+    "FAMILY":        { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
+    "GOALS":         { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
+    "FINANCE":       { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
+    "HABITS":        { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
+    "MINDSET":       { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
+    "SLEEP":         { "total_posts": 0, "last_used": null, "last_10_posts": 0 },
+    "RELATIONSHIPS": { "total_posts": 0, "last_used": null, "last_10_posts": 0 }
+  },
+  "recent_post_history": []
+}

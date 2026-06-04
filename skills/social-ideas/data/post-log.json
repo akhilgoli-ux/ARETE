@@ -1,0 +1,18 @@
+{
+  "_readme": "Performance Memory — logs every post generated so the skill learns user preferences over time.",
+  "total_sessions": 0,
+  "format_usage": {
+    "trojan-horse": 0, "ugc-rant": 0, "story-time": 0, "founder-story": 0,
+    "day-in-my-life": 0, "voiceover-broll": 0, "before-after": 0,
+    "did-you-know": 0, "myth-vs-reality": 0, "countdown": 0,
+    "green-screen": 0, "comment-reply": 0, "pov": 0, "duet-bait": 0,
+    "trending-audio": 0, "quote-drop": 0, "aesthetic-mood": 0,
+    "carousel": 0, "static-ad": 0
+  },
+  "hook_category_usage": {
+    "curiosity-gap": 0, "mistake-warning": 0, "contrarian": 0,
+    "direct-address": 0, "list-tease": 0, "bold-stat": 0,
+    "pattern-interrupt": 0, "future-self": 0, "vulnerability": 0, "pov": 0
+  },
+  "sessions": []
+}
